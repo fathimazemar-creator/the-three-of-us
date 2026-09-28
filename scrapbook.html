@@ -7,83 +7,67 @@
 <style>
 
 body{
-    background:#fff0f6;
-    font-family:Arial, sans-serif;
     margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#fff0f6,#f8f0ff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.book{
+    width:700px;
+    background:white;
     padding:50px;
+    border-radius:30px;
     text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+    position:relative;
+}
+
+.tape{
+    width:130px;
+    height:25px;
+    background:#ffd6e7;
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%) rotate(-4deg);
 }
 
 h1{
     color:#ff6fa5;
-    margin-bottom:50px;
+    font-size:45px;
 }
 
-.scrapbook{
-    position:relative;
-    max-width:1000px;
-    margin:auto;
-    min-height:800px;
-}
-
-.polaroid{
-    background:white;
-    width:250px;
-    padding:15px;
-    box-shadow:0 10px 20px rgba(0,0,0,0.15);
-    position:absolute;
-}
-
-.polaroid img{
-    width:100%;
-    border-radius:5px;
-}
-
-.note{
-    margin-top:10px;
+.subtitle{
     color:#666;
-    font-family:cursive;
+    font-size:20px;
+    line-height:1.8;
+    margin-top:20px;
 }
 
-.photo1{
-    top:20px;
-    left:100px;
-    transform:rotate(-6deg);
+.button{
+    display:block;
+    width:280px;
+    margin:18px auto;
+    padding:15px;
+    background:#ffe5f0;
+    border-radius:25px;
+    text-decoration:none;
+    color:#ff5d9e;
+    font-size:20px;
+    transition:0.3s;
 }
 
-.photo2{
-    top:150px;
-    right:100px;
-    transform:rotate(5deg);
-}
-
-.photo3{
-    top:400px;
-    left:250px;
-    transform:rotate(-4deg);
-}
-
-.lock-btn{
-    background:#ff8ab7;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:18px;
-    margin-top:850px;
-}
-
-.lock-btn:hover{
+.button:hover{
     transform:scale(1.05);
 }
 
-.home-btn{
-    display:inline-block;
-    margin-top:20px;
-    color:#ff6fa5;
-    text-decoration:none;
-    font-size:18px;
+.footer{
+    margin-top:30px;
+    color:#999;
 }
 
 </style>
@@ -91,42 +75,41 @@ h1{
 
 <body>
 
+<div class="book">
+
+<div class="tape"></div>
+
 <h1>📖 Our Scrapbook 📖</h1>
 
-<div class="scrapbook">
-
-<div class="polaroid photo1">
-<img src="memory1.jpeg">
-<div class="note">
-Our first memory together 💖
+<div class="subtitle">
+The story of three idiots 💖<br>
+with zero braincells 🧠❌<br>
+and infinite memories ✨
 </div>
-</div>
-
-<div class="polaroid photo2">
-<img src="memory2.jpeg">
-<div class="note">
-The day chaos started 😭
-</div>
-</div>
-
-<div class="polaroid photo3">
-<img src="memory3.jpeg">
-<div class="note">
-Three idiots. Infinite memories ✨
-</div>
-</div>
-
-</div>
-
-<button class="lock-btn" onclick="checkPassword()">
-🔒 Open Secret Memories
-</button>
 
 <br>
 
-<a href="index.html" class="home-btn">
-🏠 Back Home
+<button class="button" onclick="checkPassword()">
+🔒 Open Secret Memories
+</button>
+
+<a href="mixtape.html" class="button">
+🎵 Friendship Mixtape
 </a>
+
+<a href="games.html" class="button">
+🎮 Friendship Games
+</a>
+
+<a href="letters.html" class="button">
+💌 Secret Letters
+</a>
+
+<div class="footer">
+Made with chaos, laughter and friendship 🌸
+</div>
+
+</div>
 
 <script>
 
