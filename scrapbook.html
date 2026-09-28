@@ -8,31 +8,82 @@
 
 body{
     background:#fff0f6;
-    font-family:Arial;
-    text-align:center;
+    font-family:Arial, sans-serif;
+    margin:0;
     padding:50px;
+    text-align:center;
 }
 
 h1{
     color:#ff6fa5;
+    margin-bottom:50px;
+}
+
+.scrapbook{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+    min-height:800px;
 }
 
 .polaroid{
     background:white;
     width:250px;
     padding:15px;
-    margin:30px auto;
     box-shadow:0 10px 20px rgba(0,0,0,0.15);
-    transform:rotate(-3deg);
+    position:absolute;
 }
 
 .polaroid img{
     width:100%;
+    border-radius:5px;
 }
 
 .note{
     margin-top:10px;
     color:#666;
+    font-family:cursive;
+}
+
+.photo1{
+    top:20px;
+    left:100px;
+    transform:rotate(-6deg);
+}
+
+.photo2{
+    top:150px;
+    right:100px;
+    transform:rotate(5deg);
+}
+
+.photo3{
+    top:400px;
+    left:250px;
+    transform:rotate(-4deg);
+}
+
+.lock-btn{
+    background:#ff8ab7;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    margin-top:850px;
+}
+
+.lock-btn:hover{
+    transform:scale(1.05);
+}
+
+.home-btn{
+    display:inline-block;
+    margin-top:20px;
+    color:#ff6fa5;
+    text-decoration:none;
+    font-size:18px;
 }
 
 </style>
@@ -42,22 +93,63 @@ h1{
 
 <h1>📖 Our Scrapbook 📖</h1>
 
-<div class="polaroid">
+<div class="scrapbook">
 
-<img src="https://via.placeholder.com/250">
-
-<div class="photo">
+<div class="polaroid photo1">
 <img src="memory1.jpeg">
-<p>Our first memory together 💖</p>
+<div class="note">
+Our first memory together 💖
+</div>
+</div>
+
+<div class="polaroid photo2">
+<img src="memory2.jpeg">
+<div class="note">
+The day chaos started 😭
+</div>
+</div>
+
+<div class="polaroid photo3">
+<img src="memory3.jpeg">
+<div class="note">
+Three idiots. Infinite memories ✨
+</div>
 </div>
 
 </div>
+
+<button class="lock-btn" onclick="checkPassword()">
+🔒 Open Secret Memories
+</button>
 
 <br>
 
-<a href="index.html">
+<a href="index.html" class="home-btn">
 🏠 Back Home
 </a>
+
+<script>
+
+function checkPassword(){
+
+let password =
+prompt("Enter our secret password 💖");
+
+if(password=="2025trip"){
+
+window.location.href="secret.html";
+
+}
+
+else{
+
+alert("Wrong password 😭");
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
