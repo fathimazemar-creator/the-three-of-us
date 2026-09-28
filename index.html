@@ -4,29 +4,52 @@
 <title>The Three Of Us 🌸</title>
 
 <style>
+
 body{
-    background: linear-gradient(to bottom, #fff7fb, #f5efff);
+    background: linear-gradient(135deg,#fff0f6,#f8f0ff);
     font-family: Arial, sans-serif;
-    text-align:center;
-    padding:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
 .card{
+    width:700px;
     background:white;
-    max-width:700px;
-    margin:auto;
-    padding:30px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+    text-align:center;
+    position:relative;
+}
+
+.tape{
+    width:120px;
+    height:25px;
+    background:#ffd6e7;
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%) rotate(-3deg);
 }
 
 h1{
-    color:#ff70a6;
+    color:#ff6fa5;
 }
 
-p{
+.names{
     color:#666;
+    font-size:20px;
 }
+
+.message{
+    background:#fff6fa;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
 </style>
 </head>
 
@@ -34,16 +57,19 @@ p{
 
 <div class="card">
 
+<div class="tape"></div>
+
 <h1>🌸 The Three Of Us 🌸</h1>
 
-<p>
-Three idiots. Zero braincells.
-Infinite memories. 💖
+<p class="names">
+Fathima 💖 Smirna 💖 Sreenanda
 </p>
 
-<p>
-Fathima 🌷 Smirna 🌷 Sreenanda
-</p>
+<div class="message">
+Three idiots.
+Zero braincells.
+Infinite memories. ✨
+</div>
 
 </div>
 
